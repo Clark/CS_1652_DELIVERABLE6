@@ -4,13 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
 
-// junit imports
-import static org.junit.Assert.*;
-import org.junit.Test;
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
-
 public class CopsAndRobbers {
 
 	public static final String ANSI_RESET = "\u001B[0m";
@@ -98,7 +91,7 @@ public class CopsAndRobbers {
 		// welcome message
 		System.out.println("\nWelcome to Cops and Robbers Simulator 9001!");
 
-		// lets player choose a character to play
+		// lets player choose a character to play (money to steal)
 		System.out.println("What type of money are you stealing?");
 		Scanner input = new Scanner(System.in);
 		while (!character.equals("dollar") && !character.equals("cent") && !character.equals("yen")) {
@@ -107,11 +100,9 @@ public class CopsAndRobbers {
 		}
 		chooseCharacter(character);
 
-
 		System.out.println("You start to hear sirens blaring. Start moving! Press h for advice");
 
-		game = true;
-		score = 0;
+		// Score set
 		if(args[0].equals("easy")) score = 80; // 59
 		if(args[0].equals("hard")) score = 450; // 392
 
@@ -134,6 +125,7 @@ public class CopsAndRobbers {
 
 			
 			else {
+				// Decrement score if incorrect input is taken
 				System.out.println("Stop fumbling around! The cops are catching up!");
 				score--;
 			}

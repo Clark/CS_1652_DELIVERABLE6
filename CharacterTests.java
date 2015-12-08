@@ -8,6 +8,7 @@ import org.junit.runner.notification.Failure;
 public class CharacterTests {
 
 	@Test
+	// Ensures the player is able to steal dollars(character is dollar sign)
 	public void testCharacterDollar() {
 		boolean test = false;
 		String input = "dollar";
@@ -20,6 +21,7 @@ public class CharacterTests {
 	}
 
 	@Test
+	// Ensures the player is able to steal cents(character is cent sign)
 	public void testCharacterCent() {
 		boolean test = false;
 		String input = "cent";
@@ -32,6 +34,7 @@ public class CharacterTests {
 	}
 
 	@Test
+	// Ensures the player is able to steal yen(character is yen sign)
 	public void testCharacterYen() {
 		boolean test = false;
 		String input = "yen";

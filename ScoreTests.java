@@ -13,6 +13,7 @@ public class ScoreTests {
 	public static final String ANSI_BLUE = "\u001B[34m";
 
 	@Test
+	// Ensures scores > 0 && < 10 are displayed in red
 	public void testRed() {
 		int score = 5;
 		String methodOutput = CopsAndRobbers.scoreDisplay(score);
@@ -21,6 +22,7 @@ public class ScoreTests {
 	}
 
 	@Test
+	// Ensures scores > 9 && < 20 are displayed in yellow
 	public void testYellow() {
 		int score = 15;
 		String methodOutput = CopsAndRobbers.scoreDisplay(score);
@@ -29,6 +31,7 @@ public class ScoreTests {
 	}
 
 	@Test
+	// Ensures scores > 20 are displayed in green
 	public void testGreen() {
 		int score = 55;
 		String methodOutput = CopsAndRobbers.scoreDisplay(score);
@@ -37,6 +40,7 @@ public class ScoreTests {
 	}
 
 	@Test
+	// Ensures score when losing game is displayed in blue
 	public void testBlue() {
 		int score = 0;
 		String methodOutput = CopsAndRobbers.scoreDisplay(score);

@@ -7,6 +7,7 @@ import org.junit.runner.notification.Failure;
 public class MoveTests {
 
 	@Test
+	// Ensures the player is able to move right
 	public void testRight() {
 		String input = "d";
 		String methodOutput = CopsAndRobbers.move(input);
@@ -15,6 +16,7 @@ public class MoveTests {
 	}
 	
 	@Test
+	// Ensures the player is able to move up
 	public void testUp() {
 		String input = "w";
 		String methodOutput = CopsAndRobbers.move(input);
@@ -23,6 +25,7 @@ public class MoveTests {
 	}
 
 	@Test
+	// Ensures the player is able to move left
 	public void testLeft() {
 		String input = "a";
 		String methodOutput = CopsAndRobbers.move(input);
@@ -31,6 +34,7 @@ public class MoveTests {
 	}
 
 	@Test
+	// Ensures the player is able to move down
 	public void testDown() {
 		String input = "s";
 		String methodOutput = CopsAndRobbers.move(input);
